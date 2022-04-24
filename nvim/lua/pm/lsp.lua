@@ -34,22 +34,6 @@ for _, lsp in ipairs(servers) do
     }
 end
 
--- Also from blog...
-local on_attach = function(client, bufnr)
-  -- ...
-end
-
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
-
-for _, lsp in ipairs(servers) do
-    nvim_lsp[lsp].setup {
-        capabilities = capabilities,
-        on_attach = on_attach,
-    }
-end
-
-
 -- from blog
 -- https://www.jakewiesler.com/blog/getting-started-with-vim
 -- nvim-cmp
